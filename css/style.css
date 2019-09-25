@@ -1,0 +1,75 @@
+body {
+    padding: 50px;
+}
+
+.tab {
+    padding: 20px;
+    margin: 0 auto;
+    display: none;
+    border: 0.5px solid lightgray;
+    border-radius: 4px;
+}
+
+#logo{
+    float: left;
+    padding: 20px;
+    max-width: 100%;
+}
+
+#logo2{
+	margin: 0px 0px 10px 18.4%;
+}
+
+@media only screen and (max-width: 700px) {
+#logo2{
+	display: none;
+}
+}
+
+footer {
+    background-color: #F5F5F5;
+    padding: 10px;
+    text-align: center;
+    color: black;
+}
+
+body li{
+    list-style-image: url("../images/success.png")
+}
+
+body h3{
+    font-family: 'Times New Roman', Times, serif;
+}
+
+div textarea{
+    resize: vertical;
+}
+
+#result{
+	margin: 0px 0px 0px 18.5%;
+}
+
+#busc li{
+	list-style-image: none;
+	list-style: none;
+}
+
+#busc li li{
+	list-style-image: none;
+	list-style: square;
+}
+
+#busc img{
+	border-radius: 8px;
+	width: 250px;
+	height: 170px;
+}
+
+#detalhefotos img{
+	border-radius: 8px;
+	width: 790px;
+}
+
+#recsenha{
+	margin: 0px 10px 0px 0px;
+}
