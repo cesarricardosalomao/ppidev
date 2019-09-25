@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <title>Cadastro de Clientes Proprietários</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="css/style.css"> <!-- CSS -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> <!-- JQuery -->
+	<script src="js/script.js"></script> <!-- Javascript -->
+
+	<!-- Bootstrap -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fontawesome/4.7.0/css/font-awesome.min.css">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Adaptar para qualquer dispositivo -->
+</head>
+  
+<div class="container">
+
+<form name="cad_cliente_prop" method="post">
+
+	<div class="form-group row">
+		<label class="col-sm-1" for="nome">Nome</label>
+		<div class="col-sm-3">
+		  <input type="text" class="form-control" id="nome" required autofocus>
+		</div>
+		<label class="col-sm-1" for="cpf">CPF</label>
+		<div class="col-sm-3">
+		  <input type="text" class="form-control" id="cpf" required>
+		</div>
+		<label class="col-sm-1" for="endereco">Endereço</label>
+		<div class="col-sm-3">
+		  <input type="text" class="form-control" id="endereco" required>
+		</div>
+
+	</div>  
+
+	<div class="form-group row">
+		<label class="col-sm-2" for="telefone_cont">Telefone contato</label>
+		<div class="col-sm-4">
+		  <input type="tel" class="form-control" id="telefone_cont">
+		</div>
+		<label class="col-sm-2" for="telefone_cel">Telefone celular</label>
+		<div class="col-sm-4">
+		  <input type="tel" class="form-control" id="telefone_cel" required>
+		</div>
+	</div>
+  
+	<div class="form-group row">
+		<label class="col-sm-1" for="email">Email</label>
+		<div class="col-sm-2">
+		  <input type="email" class="form-control" id="email">
+		</div>
+		<label class="col-sm-1" for="sexo">Sexo</label>
+		<div class="col-sm-2">
+		  <select class="form-control" id="sexo" required>
+			<option value="masculino">Masculino</option>
+			<option value="feminino">Feminino</option>
+			<option value="nao_binario">Não-binário</option>
+		  </select>
+		</div>
+		<label class="col-sm-1" for="estado_civil">Estado Civil</label>
+		<div class="col-sm-2">
+		  <select class="form-control" id="estado_civil" required>
+			<option value="solteiro">Solteiro</option>
+			<option value="casado">Casado</option>
+			<option value="separado">Separado</option>
+			<option value="divorciado">Divorciado</option>
+			<option value="viuvo">Viúvo</option>
+		  </select>
+		</div>
+		<label class="col-sm-1" for="profissao">Profissão</label>
+		<div class="col-sm-2">
+		  <input type="text" class="form-control" id="profissao" required>
+		</div>
+	</div>
+	<div class="form-group row">
+		<div class="col-sm-6">
+			<input type="submit" value="Cadastrar">
+		</div>
+		<div class="col-sm-6">
+			<input type="reset" value="Limpar">
+		</div>
+	</div>
+	</form>
+
+  </div>
+
+
+
+</body>
+</html>

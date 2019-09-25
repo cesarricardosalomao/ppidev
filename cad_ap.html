@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <title>Cadastro de Casas</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="css/style.css"> <!-- CSS -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> <!-- JQuery -->
+	<script src="js/script.js"></script> <!-- Javascript -->
+
+	<!-- Bootstrap -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fontawesome/4.7.0/css/font-awesome.min.css">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Adaptar para qualquer dispositivo -->
+</head>
+  
+<div class="container">
+
+<form name="cad_ap" method="post">
+
+	<div class="form-group row">
+		<label class="col-sm-1" for="cep">CEP</label>
+		<div class="col-sm-2">
+		  <input type="text" class="form-control" id="cep" required autofocus>
+		</div>
+		<label class="col-sm-1" for="logradouro">Logradouro</label>
+		<div class="col-sm-2">
+		  <input type="text" class="form-control" id="logradouro" required>
+		</div>
+		<label class="col-sm-1" for="num">Número</label>
+		<div class="col-sm-2">
+		  <input type="text" class="form-control" id="num" required>
+		</div>
+		<label class="col-sm-1" for="comp">Complemento</label>
+		<div class="col-sm-2">
+		  <input type="text" class="form-control" id="comp">
+		</div>
+	</div>
+	
+	<div class="form-group row">
+		<label class="col-sm-1" for="bairro">Bairro</label>
+		<div class="col-sm-3">
+		  <input type="text" class="form-control" id="bairro" required>
+		</div>
+		<label class="col-sm-1" for="cidade">Cidade</label>
+		<div class="col-sm-3">
+		  <input type="text" class="form-control" id="cidade" required>
+		</div>
+		<label class="col-sm-1" for="estado">Estado</label>
+		<div class="col-sm-3">
+		  <input type="text" class="form-control" id="estado" required>
+	</div>
+
+	<div class="form-group row">
+		<label class="col-sm-1" for="qtd_quartos">Qtd. de quartos</label>
+		<div class="col-sm-2">
+		  <input type="text" class="form-control" id="qtd_quartos" required>
+		</div>
+		<label class="col-sm-1" for="qtd_suites">Qtd. de suítes</label>
+		<div class="col-sm-2">
+		  <input type="text" class="form-control" id="qtd_suites" required>
+		</div>
+		<label class="col-sm-1" for="qtd_salas_estar">Qtd. de salas de estar</label>
+		<div class="col-sm-2">
+		  <input type="text" class="form-control" id="qtd_salas_estar" required>
+		</div>
+		<label class="col-sm-1" for="qtd_salas_jantar">Qtd. de salas de jantar</label>
+		<div class="col-sm-2">
+		  <input type="text" class="form-control" id="qtd_salas_jantar" required>
+		</div>
+	</div>
+
+	<div class="form-group row">
+		<label class="col-sm-1" for="nro_vagas_garagem">Nº de vagas na garagem</label>
+		<div class="col-sm-3">
+		  <input type="text" class="form-control" id="nro_vagas_garagem" required>
+		</div>
+		<label class="col-sm-1" for="area">Área (m²)</label>
+		<div class="col-sm-3">
+		  <input type="text" class="form-control" id="area" required>
+		</div>
+		<label class="col-sm-1" for="data_constr">Data da construção</label>
+		<div class="col-sm-3">
+		  <input type="date" class="form-control" id="data_constr" required>
+		</div>
+	</div>
+  
+	<div class="form-group row">
+		<label class="col-sm-2" for="armario_embutido">Possui armário embutido?</label>
+		<div class="col-sm-4">
+			<label><input type="radio" name="armario_embutido">Sim</label>
+			<label><input type="radio" name="armario_embutido">Não</label>
+		</div>
+		<label class="col-sm-2" for="desc">Descrição</label>
+		<div class="col-sm-4">
+		  <textarea name="descricao" class="form-control" id="desc"></textarea>
+		</div>
+	</div>
+	
+	<div class="form-group row">
+		<label class="col-sm-1" for="andar">Andar</label>
+		<div class="col-sm-3">
+		  <input type="text" class="form-control" id="andar" required>
+		</div>
+		<label class="col-sm-1" for="valor_cond">Valor do condomínio</label>
+		<div class="col-sm-3">
+		  <input type="text" class="form-control" id="valor_cond" required>
+		</div>
+		<label class="col-sm-1" for="portaria_24hrs">Possui portaria 24 horas?</label>
+		<div class="col-sm-3">
+			<label><input type="radio" name="portaria_24hrs">Sim</label>
+			<label><input type="radio" name="portaria_24hrs">Não</label>
+		</div>
+	</div>
+	
+	<div class="form-group row">
+		<label class="col-sm-2" for="proprietario">Proprietário</label>
+		<div class="col-sm-4">
+			<select class="form-control" id="proprietario" required>
+			</select>
+		</div>
+		<label class="col-sm-2" for="fotos">Fotos</label>
+		<div class="col-sm-4">
+		  <input type="file" name="pic" class="form-control" id="fotos" multiple>
+		  <input type="submit" value="Enviar">
+		</div>
+	</div>
+	
+	<div class="form-group row">
+		<label class="col-sm-2" for="tipo">Tipo</label>
+		<div class="col-sm-4">
+			<select class="form-control" id="tipo" required>
+				<option value="aluguel">Aluguel</option>
+				<option value="venda">Venda</option>
+			</select>
+		</div>
+		<label class="col-sm-2" for="valor_sugerido">Valor sugerido</label>
+		<div class="col-sm-4">
+		  <input type="text" class="form-control" id="valor_sugerido" required>
+		</div>
+	</div>
+	
+	</form>
+	
+  </div>
+  
+</body>
+
+</html>
