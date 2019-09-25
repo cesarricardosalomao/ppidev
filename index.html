@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>Saguão Imóveis</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="css/style.css"> <!-- CSS -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> <!-- JQuery -->
+        <script src="js/script.js"></script> <!-- Javascript -->
+
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fontawesome/4.7.0/css/font-awesome.min.css">
+
+
+        <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Adaptar para qualquer dispositivo -->
+    </head>
+
+    <header>
+	<img src="images/toplogo.png" id="logo2">
+            <div class="container">
+            <nav class="navbar navbar-inverse">
+                    <div class="container-fluid">
+                      
+                      <ul class="nav navbar-nav">
+                          <li class="active"><a class="navLink" href="#" onclick="openPage('paginaHome', this);">Página Inicial</a></li>
+                          <li><a class="navLink" href="#" onclick="openPage('pagecontato', this);">Contato</a></li>
+                          <li><a class="navLink" href="#" onclick="openPage('pageimoveis', this);">Imóveis</a></li>
+                      </ul>
+                      <ul class="nav navbar-nav navbar-right">
+                              <li><a href="#" data-toggle="modal" data-target="#modallogin"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                      </ul>
+                      
+                    </div>
+                  </nav>
+            </div>
+		
+	<!-- Modal Login -->
+	<div class="modal fade" id="modallogin" role="dialog">
+		<div class="modal-dialog">
+			<div class="modal-content">
+			
+			<!-- Header -->
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal">&times;</button>
+				<h4 class="modal-title">Login</h4>
+			</div>
+			
+			<!-- Body -->
+			<div class="modal-body">
+				<form class="form-group">
+					<div class="row">
+						<div class="col-sm-6">
+							<label for="usuario">Usuário:</label>
+							<input class="form-control" name="usuario" type="text" placeholder="Informe seu usuário" required>
+						</div>
+						<div class="col-sm-6">
+							<label for="senha">Senha:</label>
+							<input class="form-control" name="senha" type="password" placeholder="Informe sua senha" required>
+						</div>
+					</div>
+			</div>
+			
+			<!-- Footer -->
+			<div class="modal-footer">
+					<div class="row">
+					<div class="col-sm-12 text-right">
+						<a id="recsenha" href="#" title="Recuperar senha">Esqueceu sua senha?</a>
+						<button class="btn btn-success" type="submit">Fazer login</button>
+					</div>
+					</div>
+			</div>
+			</div>
+			</form>
+			
+			</div>
+		</div>
+	</div>
+
+    </header>
+
+<body>
+	<!-- Área de resultados -->
+	
+    <div class="container">
+    <div class="tab" id="pageresult">
+		<h3>Resultados de busca</h3>
+		<hr>
+			<ul id="busc">
+				<!-- Result 1 -->
+				<li>
+					<div class="row">
+						<div class="col-sm-3">
+							<ul>
+								<li>Preço: R$300.000;</li>
+								<li>3 quartos;</li>
+								<li>332m² construídos;</li>
+								<li>Churrasqueira;</li>
+								<li>Piscina;</li>
+								<li>Ducha;</li>
+								<li>Área de lazer.</li>
+							</ul>
+						</div>
+						<div class="col-sm-3">
+							<img src="images/foto1.jpg" alt="Frente casa" title="Frente casa">
+						</div>
+						<div class="col-sm-3">
+							<img src="images/foto2.jpg" alt="Área de lazer" title="Área de lazer">
+						</div>
+						<div class="col-sm-3">
+							<img src="images/foto3.jpg" alt="Quarto" title="Quarto">
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-sm-2">
+						<a href="#modalinfo" title="Informações detalhadas" data-toggle="modal">Informações detalhadas</a><br>
+						<a href="#interessemodal" title="Demonstrar interesse" data-toggle="modal">Tenho Interesse</a>
+					</div>
+				</li>
+				<hr>
+				
+				<!-- Result 2 -->
+				<li>
+					<div class="row">
+						<div class="col-sm-3">
+							<ul>
+								<li>Preço: R$300.000;</li>
+								<li>3 quartos;</li>
+								<li>332m² construídos;</li>
+								<li>Churrasqueira;</li>
+								<li>Piscina;</li>
+								<li>Ducha;</li>
+								<li>Área de lazer.</li>
+							</ul>
+						</div>
+						<div class="col-sm-3">
+							<img src="images/foto1.jpg" alt="Frente casa" title="Frente casa">
+						</div>
+						<div class="col-sm-3">
+							<img src="images/foto2.jpg" alt="Área de lazer" title="Área de lazer">
+						</div>
+						<div class="col-sm-3">
+							<img src="images/foto3.jpg" alt="Quarto" title="Quarto">
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-sm-2">
+						<a href="#modalinfo" title="Informações detalhadas" data-toggle="modal">Informações detalhadas</a><br>
+						<a href="#interessemodal" title="Demonstrar interesse" data-toggle="modal">Tenho Interesse</a>
+					</div>
+				</li>
+				<hr>
+				
+				<!-- Result 3 -->
+				<li>
+					<div class="row">
+						<div class="col-sm-3">
+							<ul>
+								<li>Preço: R$300.000;</li>
+								<li>3 quartos;</li>
+								<li>332m² construídos;</li>
+								<li>Churrasqueira;</li>
+								<li>Piscina;</li>
+								<li>Ducha;</li>
+								<li>Área de lazer.</li>
+							</ul>
+						</div>
+						<div class="col-sm-3">
+							<img src="images/foto1.jpg" alt="Frente casa" title="Frente casa">
+						</div>
+						<div class="col-sm-3">
+							<img src="images/foto2.jpg" alt="Área de lazer" title="Área de lazer">
+						</div>
+						<div class="col-sm-3">
+							<img src="images/foto3.jpg" alt="Quarto" title="Quarto">
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-sm-2">
+						<a href="#modalinfo" title="Informações detalhadas" data-toggle="modal">Informações detalhadas</a><br>
+						<a href="#interessemodal" title="Demonstrar interesse" data-toggle="modal">Tenho Interesse</a>
+					</div>
+				</li>
+				<hr>
+            </ul>
+    </div>
+	</div>
+
+	<!-- Modal infos -->
+	<div class="modal fade" id="modalinfo" role="dialog">
+		<div class="modal-dialog modal-lg">
+			<div class="modal-content">
+				
+			<!-- Cabeçalho -->
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal">&times;</button>
+				<h4 class="modal-title">Informações detalhadas do imóvel</h4>
+			</div>
+			
+			<!-- Body -->
+			<div class="modal-body">
+				<div class="row">
+					<div class="col-sm-12">
+						<ul>
+							<li>
+							Disponível para: Aquisição;
+							</li>
+							<li>
+							Bairro: Santa Mônica;
+							</li>
+							<li>
+							Preço: R$300.000;
+							</li>
+							<li>
+							3 quartos;
+							</li>
+							<li>
+							Construção: 332m²;
+							</li>
+							<li>
+							Possui: churrasqueira, piscina, ducha e área de lazer;
+							</li>
+							<li id="detalhefotos">
+							Fotos:
+							<div class="row">
+							<div class="col-sm-12"><img src="images/foto1.jpg"></div>
+							</div>
+							<hr>
+							<div class="row">
+							<div class="col-sm-12"><img src="images/foto2.jpg"></div>
+							</div>
+							<hr>
+							<div class="row">
+							<div class="col-sm-12"><img src="images/foto3.jpg"></div>
+							</div>
+							<hr>
+							<div class="row">
+							<div class="col-sm-12"><img src="images/interior2.jpg"></div>
+							</div>
+							<hr>
+							<div class="row">
+							<div class="col-sm-12"><img src="images/interior3.jpg"></div>
+							</div>
+							<hr>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			
+			
+			</div>
+		</div>
+	</div>
+           
+	<!-- Modal Interesse -->
+	<div class="modal fade" id="interessemodal" role="dialog">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<!-- Header -->
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+					<h4 class="modal-title">Demonstrar interesse</h4>
+				</div>
+				
+				<!-- Body -->
+				<div class="modal-body">
+					<form class="form-group">
+						<div class="row">
+							<div class="col-sm-12">
+							<label for="nomeinteresse">Nome completo: </label>
+							<input type="text" name="nomeinteresse" class="form-control" required>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-sm-12">
+							<label for="emailinteresse">Email: </label>
+							<input type="email" name="emailinteresse" class="form-control" required>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-sm-12">
+							<label for="telefoneinteresse">Telefone: </label>
+							<input type="tel" pattern="[0-9]{12}" name="telefoneinteresse" class="form-control" placeholder="Ex: 03412345678" required>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-sm-12">
+							<label for="propostainteresse">Descrição da proposta: </label>
+							<textarea name="propostainteresse" class="form-control" required></textarea>
+							</div>
+						</div>
+				</div>
+				
+				<!-- Footer -->
+				<div class="modal-footer">
+					<div class="row">
+						<div class="col-sm-12 text-right">
+						<button class="btn btn-success" type="submit">Enviar proposta</button>
+						</div>
+					</div>
+				</div>
+				</form>
+				
+			</div>
+		</div>
+	</div>
+	
+	<!-- Página Inicial -->
+    <div class="container">
+    <div class="tab" id="paginaHome">
+                <img src="images/logo2.png" id="logo"><h3>Saguão Imóveis</h3>
+                <p>A <b>Saguão Imóveis</b> é uma empresa que está há mais de 25 anos no mercado de imóveis. Nossa prioridade sempre é o cliente e, dessa forma, sempre
+                    queremos o melhor para você! Aqui você encontra casas e apartamentos de altíssimo padrão por um preço que
+                    cabe no seu bolso! Tá esperando o que? Venha já nos conhecer!
+                </p>
+                <br>
+                <h3>Nossa missão</h5>
+                <p>Desde o inicio queremos proporcionar ao máximo de pessoas um dos seus maiores sonhos:
+                    <b>Ter a casa própria!</b>
+                Dessa forma, a Saguão Imobiliária foi fundada com objetivo de vender e alugar imóveis de alto padrão com um preço acessível à todos.
+                </p>
+                <br>
+                <h3>Valores da empresa</h4>
+                <p>
+                <ul>
+                    <li><b>Excelência em atendimento</b></li>
+                    Uma empresa de comercialização imobiliária vale o quanto valem os serviços prestados por seus colaboradores. Colaboradores preparados e felizes geram mais e melhores negócios.
+                    <li><b>Qualidade de parcerias e produtos</b></li>
+                    A credibilidade adquirida pela empresa é resultado da solidez dos parceiros e consequentemente da qualidade dos produtos apresentados ao mercado.
+                    <li><b>Comprometimento</b></li>
+                    Envolvimento completo com objetivos das pessoas, da empresa e dos empreende dores parceiros.
+                    <li><b>Execução</b></li>
+                    Atitude de realizar e participar, ‘ao vivo’, das ações que garantem o objetivo traçado e regularidade nas atividades focadas em vendas e de gestão.
+                    <li><b>Resultado</b></li>
+                    Respeitados os nossos valores, o resultado é o foco principal da organização. Por isso, reconhecemos aqueles que entregam os melhores resultados.
+                    <li><b>Paixão pelo que fazemos</b></li>
+                    O trabalho é uma escolha. Por isso deve ser agradável e desafiante.
+                </ul>
+                </p>
+          
+          </div>
+ 
+            
+			<!-- Aba contato -->
+            <div class="tab" id="pagecontato">
+              <h3>Contato</h3>
+              <p>Está com dúvidas? Deseja fazer um orçamento? Entre em contato conosco!</p>
+              <form name="formcontato" action="#enviar" method="post">
+              <div class="row">
+                    <div class="form-group col-sm-4">
+                        <label for="nome">Seu nome:</label>
+                        <input class="form-control" type="text" name="nome" placeholder="Informe seu nome" required>
+                    </div>
+
+                    <div class="form-group col-sm-4">
+                        <label for="email">Seu e-mail:</label>
+                        <input class="form-control" type="email" name="email" placeholder="Informe seu e-mail" required>
+                    </div>
+                
+                    <div class="form-group col-sm-4">
+                            <label for="assunto">Assunto: </label>
+                            <input class="form-control" type="text" name="assunto" placeholder="Informe um assunto" required>
+                    </div>
+              </div>
+              <div class="row">
+                    <div class="form-group col-sm-12">
+                        <label for="texto">Mensagem: </label>
+                        <textarea name="texto" class="form-control" required></textarea>
+                        <br>
+                        <button type="submit" class="btn btn-success">Enviar mensagem</button>
+                    </div>
+              </div>
+			</form>
+            </div>
+            
+			<!-- Resultado de busca -->
+            <div class="tab" id="pageresult">
+              <h3>Resultado de busca</h3>
+            </div>
+            
+            
+            <!-- Busca de imóveis -->
+            <div class="tab" id="pageimoveis">
+				<h3>Busca de Imóveis</h3>
+				<br>
+				 <form class="form-group">
+					<div class="row">
+						<label class="col-sm-2">Propósito: </label>
+						<div class="col-sm-5">
+							<div class="form-check">
+								<input class="form-check-input" type="radio" name="proposito" id="compra" value="compra" checked>
+								<label class="form-check-label" for="proposito">Aquisição</label>
+							</div>
+							<div class="form-check">
+								<input class="form-check-input" type="radio" name="proposito" id="aluguel" value="aluguel">
+								<label class="form-check-label" for="proposito">Aluguel</label>
+							</div>
+						</div>
+					</div>
+					<br>
+					<div class="row">
+						<label class="col-sm-2">Bairro: </label>
+						<div class="col-sm-4">
+							<select class="form-control" name="bairro">
+								<option value="teste">Teste1</option>
+								<option value="teste">Teste2</option>
+								<option value="teste">Teste3</option>
+							</select>
+						</div>
+						<label class="col-sm-1">Valor mínimo: </label>
+						<div class="col-sm-2">
+							<input class="form-control" type="number" min="0.0" name="precomin">
+						</div>
+						<label class="col-sm-1">Valor máximo: </label>
+						<div class="col-sm-2">
+							<input class="form-control" type="number" min="0.0" name="precomax">
+						</div>
+					</div>
+					<div class="row">
+						<label class="col-sm-2">Outras informações: </label>
+						<div class="col-sm-10">
+							<textarea name="outrasinfos" class="form-control"></textarea>
+						</div>
+					</div>
+				 <br>
+				 <input type="button" class="btn btn-success" value="Buscar imóvel" onclick="openPage('pageresult', this);">
+				 </form>
+            </div>
+          </div>
+          
+          
+</body>
+
+<footer class="navbar-fixed-bottom" id="footer">
+    <b>Saguão Imóveis © Todos direitos reservados</b>
+</footer>
+</html>
