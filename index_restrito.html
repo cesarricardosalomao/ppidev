@@ -44,7 +44,8 @@
 										<ul class="dropdown-menu">
 											<li><a class="dropdown-item" href="#" onclick="openPage('pageListagemClientes', this);">Clientes</a></li>
 											<li><a class="dropdown-item" href="#" onclick="openPage('pageListagemFuncionarios', this);">Funcionários</a></li>
-											<li><a class="dropdown-item" href="#" onclick="openPage('pageListagemImoveis', this);">Imóveis</a></li>
+											<li><a class="dropdown-item" href="#" onclick="openPage('pageListagemAps', this);">Apartamentos</a></li>
+											<li><a class="dropdown-item" href="#" onclick="openPage('pageListagemCasas', this);">Casas</a></li>
 											<li><a class="dropdown-item" href="#" onclick="openPage('pageListagemInteresses', this);">Interesses</a></li>
 										</ul>
 									</li>
@@ -65,21 +66,28 @@
 					<!-- Header -->
 					<div class="modal-header">
 						<button type="button" class="close" data-dismiss="modal">&times;</button>
-						<h4 class="modal-title">Sair</h4>
+						<h4 class="modal-title">Confirmar</h4>
 					</div>
 					
 					<!-- Body -->
 					<div class="modal-body">
 						<form class="form-group">
 							<div class="row">
-								<div class="col-sm-6">
-									<button class="btn btn-default" type="button">Sim</button>
-								</div>
-								<div class="col-sm-6">
-									<button class="btn btn-primary" type="button">Não</button>
+								<div class="col-sm-12 text-left">
+									<p>Tem certeza de que deseja sair?</p>
 								</div>
 							</div>
 						</form>
+					</div>
+					
+					<!-- Footer -->
+					<div class="modal-footer">
+						<div class="row">
+							<div class="col-sm-12 text-right">
+							<button class="btn btn-default" type="button">Sim</button>
+							<button class="btn btn-primary" type="button">Não</button>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -473,47 +481,138 @@
 			</div>
 			
 			<!-- Listagem Clientes -->
-			<div class="tab" id="pageListagemClientes">
+			<div class="tab" style="overflow-x:auto;" id="pageListagemClientes">
 				<h3>Clientes</h3>
-				<form>
-					<select>
-						<option value="teste">Teste</option>
-						<option value="teste">Teste</option>
-					</select>
-				</form>
+				<table class="table table-striped table-hover">
+					<thead>
+					  <tr>
+								<th>Nome</th>			<th>CPF</th>			<th>Endereço</th>					<th>Telefone contato</th>	<th>Telefone celular</th>	<th>Email</th>					<th>Estado Civil</th>	<th>Profissão</th>				
+					  </tr>
+					</thead>
+					<tbody>
+						<tr>	<td>Fulano de tal</td>	<td>123.456.789-01</td>	<td>Rua das Laranjeiras, 123</td>	<td>(34)1234-5678</td>		<td>(34)91234-5678</td>		<td>fulano123@outlook.com</td>	<td>Solteirão</td>		<td>Administrador</td></tr>
+						<tr>	<td>Fulano de tal</td>	<td>123.456.789-01</td>	<td>Rua das Laranjeiras, 123</td>	<td>(34)1234-5678</td>		<td>(34)91234-5678</td>		<td>fulano123@outlook.com</td>	<td>Solteirão</td>		<td>Administrador</td></tr>
+						<tr>	<td>Fulano de tal</td>	<td>123.456.789-01</td>	<td>Rua das Laranjeiras, 123</td>	<td>(34)1234-5678</td>		<td>(34)91234-5678</td>		<td>fulano123@outlook.com</td>	<td>Solteirão</td>		<td>Administrador</td></tr>
+						<tr>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td></tr>
+						<tr>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td></tr>
+						<tr>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td></tr>
+						<tr>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td></tr>
+						<tr>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td></tr>
+						<tr>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td></tr>
+						<tr>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td></tr>
+						<tr>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td></tr>
+						<tr>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td></tr>
+						<tr>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td></tr>   		
+					</tbody>
+				</table>
 			</div>
 			
 			<!-- Listagem Funcionários -->
-			<div class="tab" id="pageListagemFuncionarios">
+			<div class="tab" style="overflow-x:auto;" id="pageListagemFuncionarios">
 				<h3>Funcionários</h3>
-				<form>
-					<select>
-						<option value="teste">Teste</option>
-						<option value="teste">Teste</option>
-					</select>
-				</form>
+				<table class="table table-striped table-hover">
+					<thead>
+					  <tr>
+								<th>Nome</th>			<th>CPF</th>			<th>Telefone contato</th>	<th>Telefone celular</th>	<th>Data de ingresso</th>	<th>Cargo</th>		<th>Salário base (R$)</th>	<th>login</th>	<th>senha</th>
+					  </tr>
+					</thead>
+					<tbody>
+						<tr>	<td>Fulano de tal</td>	<td>123.456.789-01</td>	<td>(34)1234-5678</td>		<td>(34)91234-5678</td>		<td>01/01/2019</td>			<td>Vendedor</td>	<td>1.000,00</td>			<td>fulano</td>	<td>senha123</td></tr>
+						<tr>	<td>Fulano de tal</td>	<td>123.456.789-01</td>	<td>(34)1234-5678</td>		<td>(34)91234-5678</td>		<td>01/01/2019</td>			<td>Vendedor</td>	<td>1.000,00</td>			<td>fulano</td>	<td>senha123</td></tr>
+						<tr>	<td>Fulano de tal</td>	<td>123.456.789-01</td>	<td>(34)1234-5678</td>		<td>(34)91234-5678</td>		<td>01/01/2019</td>			<td>Vendedor</td>	<td>1.000,00</td>			<td>fulano</td>	<td>senha123</td></tr>
+						<tr>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td></tr>
+						<tr>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td></tr>
+						<tr>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td></tr>
+						<tr>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td></tr>
+						<tr>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td></tr>
+						<tr>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td></tr>
+						<tr>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td></tr>
+						<tr>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td></tr>
+						<tr>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td></tr>
+						<tr>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td></tr>   		
+					</tbody>
+				</table>
 			</div>
 			
-			<!-- Listagem Imóveis -->
-			<div class="tab" id="pageListagemImoveis">
-				<h3>Imóveis</h3>
-				<form>
-					<select>
-						<option value="teste">Teste</option>
-						<option value="teste">Teste</option>
-					</select>
-				</form>
+			<!-- Listagem Apartamentos -->
+			<div class="tab" style="overflow-x:auto;" id="pageListagemAps">
+				<h3>Apartamentos</h3>
+				<table class="table table-striped table-hover">
+					<thead>
+					  <tr>
+								<th>Quartos</th>	<th>Suítes</th>	<th>Salas de estar</th>	<th>Salas de jantar</th>	<th>Vagas na garagem</th>	<th>Área (m²)</th>	<th>Armário embutido</th>	<th>Descrição</th>				<th>Andar</th>	<th>Valor do cond. (R$)</th>	<th>Portaria 24h</th>
+					  </tr>
+					</thead>
+					<tbody>
+						<tr>	<td>1</td>			<td>1</td>		<td>1</td>				<td>1</td>					<td>1</td>					<td>100</td>		<td>Sim</td>				<td>Descrição do imóvel</td>	<td>1</td>		<td>100,00</td>					<td>Sim</td></tr>
+						<tr>	<td>2</td>			<td>2</td>		<td>2</td>				<td>2</td>					<td>2</td>					<td>150</td>		<td>Não</td>				<td>Descrição do imóvel</td>	<td>2</td>		<td>150,00</td>					<td>Não</td></tr>
+						<tr>	<td>3</td>			<td>3</td>		<td>3</td>				<td>3</td>					<td>3</td>					<td>200</td>		<td>Sim</td>				<td>Descrição do imóvel</td>	<td>3</td>		<td>200,00</td>					<td>Sim</td></tr>
+						<tr>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td></tr>
+						<tr>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td></tr>
+						<tr>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td></tr>
+						<tr>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td></tr>
+						<tr>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td></tr>
+						<tr>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td></tr>
+						<tr>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td></tr>
+						<tr>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td></tr>
+						<tr>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td></tr>
+						<tr>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td></tr>   		
+					</tbody>
+				</table>
+			</div>
+			
+			<!-- Listagem Casas -->
+			<div class="tab" style="overflow-x:auto;" id="pageListagemCasas">
+				<h3>Casas</h3>
+				<table class="table table-striped table-hover">
+					<thead>
+					  <tr>
+								<th>Quartos</th>	<th>Suítes</th>	<th>Salas de estar</th>	<th>Salas de jantar</th>	<th>Vagas na garagem</th>	<th>Área (m²)</th>	<th>Armário embutido</th>	<th>Descrição</th>				
+					  </tr>
+					</thead>
+					<tbody>
+						<tr>	<td>1</td>			<td>1</td>		<td>1</td>				<td>1</td>					<td>1</td>					<td>100</td>		<td>Sim</td>				<td>Descrição do imóvel</td></tr>
+						<tr>	<td>2</td>			<td>2</td>		<td>2</td>				<td>2</td>					<td>2</td>					<td>150</td>		<td>Não</td>				<td>Descrição do imóvel</td></tr>
+						<tr>	<td>3</td>			<td>3</td>		<td>3</td>				<td>3</td>					<td>3</td>					<td>200</td>		<td>Sim</td>				<td>Descrição do imóvel</td></tr>
+						<tr>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td></tr>
+						<tr>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td></tr>
+						<tr>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td></tr>
+						<tr>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td></tr>
+						<tr>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td></tr>
+						<tr>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td></tr>
+						<tr>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td></tr>
+						<tr>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td></tr>
+						<tr>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td></tr>
+						<tr>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td></tr>   		
+					</tbody>
+				</table>
 			</div>
 			
 			<!-- Listagem Interesses -->
-			<div class="tab" id="pageListagemInteresses">
+			<div class="tab" style="overflow-x:auto;" id="pageListagemInteresses">
 				<h3>Interesses</h3>
-				<form>
-					<select>
-						<option value="teste">Teste</option>
-						<option value="teste">Teste</option>
-					</select>
-				</form>
+				<table class="table table-striped table-hover">
+					<thead>
+					  <tr>
+								<th>Nome</th>			<th>Telefone contato</th>	<th>Telefone celular</th>	<th>Email</th>					<th>Tipo do imóvel</th>		<th>Imóvel</th>		<th>Proposta</th>				
+					  </tr>
+					</thead>
+					<tbody>
+						<tr>	<td>Fulano de tal</td>	<td>(34)1234-5678</td>		<td>(34)91234-5678</td>		<td>fulano123@outlook.com</td>	<td>Casa</td>				<td>Imóvel 1</td>	<td>Descrição da proposta</td></tr>
+						<tr>	<td>Fulano de tal</td>	<td>(34)1234-5678</td>		<td>(34)91234-5678</td>		<td>fulano123@outlook.com</td>	<td>Apartamento</td>		<td>Imóvel 2</td>	<td>Descrição da proposta</td></tr>
+						<tr>	<td>Fulano de tal</td>	<td>(34)1234-5678</td>		<td>(34)91234-5678</td>		<td>fulano123@outlook.com</td>	<td>Casa</td>				<td>Imóvel 3</td>	<td>Descrição da proposta</td></tr>
+						<tr>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td></tr>
+						<tr>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td></tr>
+						<tr>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td></tr>
+						<tr>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td></tr>
+						<tr>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td></tr>
+						<tr>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td></tr>
+						<tr>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td></tr>
+						<tr>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td></tr>
+						<tr>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td></tr>
+						<tr>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td></tr>   		
+					</tbody>
+				</table>
 			</div>
 		</div>
 
