@@ -110,7 +110,7 @@
 					<div class="form-group row">
 						<label class="col-sm-1" for="nome">Nome</label>
 						<div class="col-sm-3">
-						  <input type="text" class="form-control" id="nome" required autofocus>
+						  <input type="text" class="form-control" id="nome" pattern="[A-Za-z]" required autofocus>
 						</div>
 						<label class="col-sm-1" for="cpf">CPF</label>
 						<div class="col-sm-3">
@@ -144,7 +144,6 @@
 						  <select class="form-control" id="sexo" required>
 							<option value="masculino">Masculino</option>
 							<option value="feminino">Feminino</option>
-							<option value="nao_binario">Não-binário</option>
 						  </select>
 						</div>
 						<label class="col-sm-1" for="estado_civil">Estado Civil</label>
@@ -181,7 +180,7 @@
 				<div class="form-group row">
 					<label class="col-sm-1" for="nome">Nome</label>
 					<div class="col-sm-5">
-						<input type="text" class="form-control" id="nome" required autofocus>
+						<input type="text" class="form-control" id="nome" pattern="[A-Za-z]" required autofocus>
 					</div>
 					<label class="col-sm-1" for="cpf">CPF</label>
 					<div class="col-sm-5">
@@ -253,7 +252,7 @@
 						</div>
 						<label class="col-sm-1" for="num">Número</label>
 						<div class="col-sm-2">
-						  <input type="text" class="form-control" id="num" required>
+						  <input type="number" class="form-control" id="num" required>
 						</div>
 						<label class="col-sm-1" for="comp">Complemento</label>
 						<div class="col-sm-2">
@@ -272,37 +271,37 @@
 						</div>
 						<label class="col-sm-1" for="estado">Estado</label>
 						<div class="col-sm-3">
-						  <input type="text" class="form-control" id="estado" required>
+						  <input type="text" class="form-control" id="estado" pattern="[A-Za-z] {2}" required>
 						</div>
 					</div>
 
 					<div class="form-group row">
 						<label class="col-sm-1" for="qtd_quartos">Qtd. de quartos</label>
 						<div class="col-sm-2">
-						  <input type="text" class="form-control" id="qtd_quartos" required>
+						  <input type="number" class="form-control" id="qtd_quartos" required>
 						</div>
 						<label class="col-sm-1" for="qtd_suites">Qtd. de suítes</label>
 						<div class="col-sm-2">
-						  <input type="text" class="form-control" id="qtd_suites" required>
+						  <input type="number" class="form-control" id="qtd_suites" required>
 						</div>
 						<label class="col-sm-1" for="qtd_salas_estar">Qtd. de salas de estar</label>
 						<div class="col-sm-2">
-						  <input type="text" class="form-control" id="qtd_salas_estar" required>
+						  <input type="number" class="form-control" id="qtd_salas_estar" required>
 						</div>
 						<label class="col-sm-1" for="qtd_salas_jantar">Qtd. de salas de jantar</label>
 						<div class="col-sm-2">
-						  <input type="text" class="form-control" id="qtd_salas_jantar" required>
+						  <input type="number" class="form-control" id="qtd_salas_jantar" required>
 						</div>
 					</div>
 
 					<div class="form-group row">
 						<label class="col-sm-1" for="nro_vagas_garagem">Nº de vagas na garagem</label>
 						<div class="col-sm-3">
-						  <input type="text" class="form-control" id="nro_vagas_garagem" required>
+						  <input type="number" class="form-control" id="nro_vagas_garagem" required>
 						</div>
 						<label class="col-sm-1" for="area">Área (m²)</label>
 						<div class="col-sm-3">
-						  <input type="text" class="form-control" id="area" required>
+						  <input type="number" class="form-control" id="area" required>
 						</div>
 						<label class="col-sm-1" for="data_constr">Data da construção</label>
 						<div class="col-sm-3">
@@ -364,6 +363,15 @@
 						  <input type="text" class="form-control" id="valor_sugerido" required>
 						</div>
 					</div>
+					
+					<div class="form-group row">
+						<div class="col-sm-6">
+							<input type="submit" value="Cadastrar">
+						</div>
+						<div class="col-sm-6">
+							<input type="reset" value="Limpar">
+						</div>
+					</div>
 		
 				</form>
 			</div>
@@ -383,7 +391,7 @@
 						</div>
 						<label class="col-sm-1" for="num">Número</label>
 						<div class="col-sm-2">
-						  <input type="text" class="form-control" id="num" required>
+						  <input type="number" class="form-control" id="num" required>
 						</div>
 						<label class="col-sm-1" for="comp">Complemento</label>
 						<div class="col-sm-2">
@@ -402,26 +410,26 @@
 						</div>
 						<label class="col-sm-1" for="estado">Estado</label>
 						<div class="col-sm-3">
-						  <input type="text" class="form-control" id="estado" required>
+						  <input type="text" class="form-control" id="estado" pattern="[A-Za-z] {2}" required>
 						</div>
 					</div>
 
 					<div class="form-group row">
 						<label class="col-sm-1" for="qtd_quartos">Qtd. de quartos</label>
 						<div class="col-sm-2">
-						  <input type="text" class="form-control" id="qtd_quartos" required>
+						  <input type="number" class="form-control" id="qtd_quartos" required>
 						</div>
 						<label class="col-sm-1" for="qtd_suites">Qtd. de suítes</label>
 						<div class="col-sm-2">
-						  <input type="text" class="form-control" id="qtd_suites" required>
+						  <input type="number" class="form-control" id="qtd_suites" required>
 						</div>
 						<label class="col-sm-1" for="qtd_salas_estar">Qtd. de salas de estar</label>
 						<div class="col-sm-2">
-						  <input type="text" class="form-control" id="qtd_salas_estar" required>
+						  <input type="number" class="form-control" id="qtd_salas_estar" required>
 						</div>
 						<label class="col-sm-1" for="qtd_salas_jantar">Qtd. de salas de jantar</label>
 						<div class="col-sm-2">
-						  <input type="text" class="form-control" id="qtd_salas_jantar" required>
+						  <input type="number" class="form-control" id="qtd_salas_jantar" required>
 						</div>
 
 					</div>  
@@ -429,11 +437,11 @@
 					<div class="form-group row">
 						<label class="col-sm-2" for="nro_vagas_garagem">Nº de vagas na garagem</label>
 						<div class="col-sm-4">
-						  <input type="text" class="form-control" id="nro_vagas_garagem" required>
+						  <input type="number" class="form-control" id="nro_vagas_garagem" required>
 						</div>
 						<label class="col-sm-2" for="area">Área (m²)</label>
 						<div class="col-sm-4">
-						  <input type="text" class="form-control" id="area" required>
+						  <input type="number" class="form-control" id="area" required>
 						</div>
 					</div>
 
@@ -475,6 +483,15 @@
 						  <input type="text" class="form-control" id="valor_sugerido" required>
 						</div>
 					</div>
+					
+					<div class="form-group row">
+						<div class="col-sm-6">
+							<input type="submit" value="Cadastrar">
+						</div>
+						<div class="col-sm-6">
+							<input type="reset" value="Limpar">
+						</div>
+					</div>
 			
 				</form>
 
@@ -492,17 +509,7 @@
 					<tbody>
 						<tr>	<td>Fulano de tal</td>	<td>123.456.789-01</td>	<td>Rua das Laranjeiras, 123</td>	<td>(34)1234-5678</td>		<td>(34)91234-5678</td>		<td>fulano123@outlook.com</td>	<td>Solteirão</td>		<td>Administrador</td></tr>
 						<tr>	<td>Fulano de tal</td>	<td>123.456.789-01</td>	<td>Rua das Laranjeiras, 123</td>	<td>(34)1234-5678</td>		<td>(34)91234-5678</td>		<td>fulano123@outlook.com</td>	<td>Solteirão</td>		<td>Administrador</td></tr>
-						<tr>	<td>Fulano de tal</td>	<td>123.456.789-01</td>	<td>Rua das Laranjeiras, 123</td>	<td>(34)1234-5678</td>		<td>(34)91234-5678</td>		<td>fulano123@outlook.com</td>	<td>Solteirão</td>		<td>Administrador</td></tr>
-						<tr>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td></tr>
-						<tr>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td></tr>
-						<tr>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td></tr>
-						<tr>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td></tr>
-						<tr>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td></tr>
-						<tr>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td></tr>
-						<tr>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td></tr>
-						<tr>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td></tr>
-						<tr>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td></tr>
-						<tr>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td></tr>   		
+						<tr>	<td>Fulano de tal</td>	<td>123.456.789-01</td>	<td>Rua das Laranjeiras, 123</td>	<td>(34)1234-5678</td>		<td>(34)91234-5678</td>		<td>fulano123@outlook.com</td>	<td>Solteirão</td>		<td>Administrador</td></tr> 		
 					</tbody>
 				</table>
 			</div>
@@ -519,17 +526,7 @@
 					<tbody>
 						<tr>	<td>Fulano de tal</td>	<td>123.456.789-01</td>	<td>(34)1234-5678</td>		<td>(34)91234-5678</td>		<td>01/01/2019</td>			<td>Vendedor</td>	<td>1.000,00</td>			<td>fulano</td>	<td>senha123</td></tr>
 						<tr>	<td>Fulano de tal</td>	<td>123.456.789-01</td>	<td>(34)1234-5678</td>		<td>(34)91234-5678</td>		<td>01/01/2019</td>			<td>Vendedor</td>	<td>1.000,00</td>			<td>fulano</td>	<td>senha123</td></tr>
-						<tr>	<td>Fulano de tal</td>	<td>123.456.789-01</td>	<td>(34)1234-5678</td>		<td>(34)91234-5678</td>		<td>01/01/2019</td>			<td>Vendedor</td>	<td>1.000,00</td>			<td>fulano</td>	<td>senha123</td></tr>
-						<tr>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td></tr>
-						<tr>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td></tr>
-						<tr>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td></tr>
-						<tr>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td></tr>
-						<tr>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td></tr>
-						<tr>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td></tr>
-						<tr>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td></tr>
-						<tr>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td></tr>
-						<tr>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td></tr>
-						<tr>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td></tr>   		
+						<tr>	<td>Fulano de tal</td>	<td>123.456.789-01</td>	<td>(34)1234-5678</td>		<td>(34)91234-5678</td>		<td>01/01/2019</td>			<td>Vendedor</td>	<td>1.000,00</td>			<td>fulano</td>	<td>senha123</td></tr> 		
 					</tbody>
 				</table>
 			</div>
@@ -546,17 +543,7 @@
 					<tbody>
 						<tr>	<td>1</td>			<td>1</td>		<td>1</td>				<td>1</td>					<td>1</td>					<td>100</td>		<td>Sim</td>				<td>Descrição do imóvel</td>	<td>1</td>		<td>100,00</td>					<td>Sim</td></tr>
 						<tr>	<td>2</td>			<td>2</td>		<td>2</td>				<td>2</td>					<td>2</td>					<td>150</td>		<td>Não</td>				<td>Descrição do imóvel</td>	<td>2</td>		<td>150,00</td>					<td>Não</td></tr>
-						<tr>	<td>3</td>			<td>3</td>		<td>3</td>				<td>3</td>					<td>3</td>					<td>200</td>		<td>Sim</td>				<td>Descrição do imóvel</td>	<td>3</td>		<td>200,00</td>					<td>Sim</td></tr>
-						<tr>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td></tr>
-						<tr>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td></tr>
-						<tr>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td></tr>
-						<tr>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td></tr>
-						<tr>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td></tr>
-						<tr>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td></tr>
-						<tr>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td></tr>
-						<tr>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td></tr>
-						<tr>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td></tr>
-						<tr>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td></tr>   		
+						<tr>	<td>3</td>			<td>3</td>		<td>3</td>				<td>3</td>					<td>3</td>					<td>200</td>		<td>Sim</td>				<td>Descrição do imóvel</td>	<td>3</td>		<td>200,00</td>					<td>Sim</td></tr> 		
 					</tbody>
 				</table>
 			</div>
@@ -573,17 +560,7 @@
 					<tbody>
 						<tr>	<td>1</td>			<td>1</td>		<td>1</td>				<td>1</td>					<td>1</td>					<td>100</td>		<td>Sim</td>				<td>Descrição do imóvel</td></tr>
 						<tr>	<td>2</td>			<td>2</td>		<td>2</td>				<td>2</td>					<td>2</td>					<td>150</td>		<td>Não</td>				<td>Descrição do imóvel</td></tr>
-						<tr>	<td>3</td>			<td>3</td>		<td>3</td>				<td>3</td>					<td>3</td>					<td>200</td>		<td>Sim</td>				<td>Descrição do imóvel</td></tr>
-						<tr>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td></tr>
-						<tr>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td></tr>
-						<tr>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td></tr>
-						<tr>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td></tr>
-						<tr>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td></tr>
-						<tr>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td></tr>
-						<tr>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td></tr>
-						<tr>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td></tr>
-						<tr>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td></tr>
-						<tr>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td></tr>   		
+						<tr>	<td>3</td>			<td>3</td>		<td>3</td>				<td>3</td>					<td>3</td>					<td>200</td>		<td>Sim</td>				<td>Descrição do imóvel</td></tr>		
 					</tbody>
 				</table>
 			</div>
@@ -600,20 +577,11 @@
 					<tbody>
 						<tr>	<td>Fulano de tal</td>	<td>(34)1234-5678</td>		<td>(34)91234-5678</td>		<td>fulano123@outlook.com</td>	<td>Casa</td>				<td>Imóvel 1</td>	<td>Descrição da proposta</td></tr>
 						<tr>	<td>Fulano de tal</td>	<td>(34)1234-5678</td>		<td>(34)91234-5678</td>		<td>fulano123@outlook.com</td>	<td>Apartamento</td>		<td>Imóvel 2</td>	<td>Descrição da proposta</td></tr>
-						<tr>	<td>Fulano de tal</td>	<td>(34)1234-5678</td>		<td>(34)91234-5678</td>		<td>fulano123@outlook.com</td>	<td>Casa</td>				<td>Imóvel 3</td>	<td>Descrição da proposta</td></tr>
-						<tr>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td></tr>
-						<tr>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td></tr>
-						<tr>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td></tr>
-						<tr>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td></tr>
-						<tr>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td></tr>
-						<tr>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td></tr>
-						<tr>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td></tr>
-						<tr>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td></tr>
-						<tr>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td></tr>
-						<tr>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td>	<td></td></tr>   		
+						<tr>	<td>Fulano de tal</td>	<td>(34)1234-5678</td>		<td>(34)91234-5678</td>		<td>fulano123@outlook.com</td>	<td>Casa</td>				<td>Imóvel 3</td>	<td>Descrição da proposta</td></tr>		
 					</tbody>
 				</table>
 			</div>
+			
 		</div>
 
 	</body>

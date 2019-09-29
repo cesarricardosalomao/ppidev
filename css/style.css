@@ -37,6 +37,10 @@ footer {
     list-style-image: url("../images/success.png")
 }
 
+label{
+	text-align:center
+}
+
 body h3{
     font-family: 'Times New Roman', Times, serif;
 }
